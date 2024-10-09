@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class ChekoutInfoPage {
+public class CheckoutInfoPage {
 
     private WebDriver driver;
 
@@ -28,7 +28,7 @@ public class ChekoutInfoPage {
     @FindBy(how = How.XPATH, using = "//input[@id='continue']")
     private WebElement btnContinue;
 
-    public ChekoutInfoPage(WebDriver driver) {
+    public CheckoutInfoPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -50,6 +50,19 @@ public class ChekoutInfoPage {
     public String getPageHeader()
     {
         return lblChekoutInfoTitle.getText();
+    }
+
+    public boolean CheckoutInfoDisplayed()
+    {
+        try
+        {
+            return (lblChekoutInfoTitle.isDisplayed());
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+
     }
 
 

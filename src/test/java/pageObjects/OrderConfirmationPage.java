@@ -28,7 +28,7 @@ public class OrderConfirmationPage {
         btnBackHome.click();
     }
 
-    public String GetOrderConfirmation()
+    public String OrderConfirmationText()
     {
         //Verify Order message
         try {
@@ -36,7 +36,19 @@ public class OrderConfirmationPage {
         }
         catch (Exception e)
         {
-            return (e.getMessage());
+            return e.getMessage();
+        }
+    }
+
+    public boolean OrderConfirmation()
+    {
+        //Verify Order message
+        try {
+            return lblOrderConfText.isDisplayed();
+        }
+        catch (Exception e)
+        {
+            return false;
         }
     }
 }

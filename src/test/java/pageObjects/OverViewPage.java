@@ -30,6 +30,19 @@ public class OverViewPage {
         btnFinish.click();
     }
 
+    public boolean OverViewDisplayed()
+    {
+        try
+        {
+            return (OverviewTitle.isDisplayed());
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+
+    }
+
 
     public OverViewPage(WebDriver driver) {
         this.driver = driver;

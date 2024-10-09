@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class YourCartPage {
+public class CartPage {
 
     private WebDriver driver;
 
@@ -19,7 +19,7 @@ public class YourCartPage {
     @FindBy(how = How.XPATH, using = "//button[@id='checkout']")
     private WebElement btnChekout;
 
-    public YourCartPage(WebDriver driver) {
+    public CartPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -29,8 +29,16 @@ public class YourCartPage {
         btnChekout.click();
     }
 
-    public void verifyCartPageTitle(String message) {
-        //Verify Page Title
-        //assertThat(cartPageTitle.getText().trim()).isEqualToIgnoringCase(message);
+    public boolean CartPageDisplayed()
+    {
+        try
+        {
+            return (cartPageTitle.isDisplayed());
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+
     }
 }
