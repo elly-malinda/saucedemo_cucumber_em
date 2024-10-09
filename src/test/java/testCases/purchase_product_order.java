@@ -6,7 +6,7 @@ import pageObjects.*;
 import testBase.BaseClass;
 
 public class purchase_product_order extends BaseClass {
-    @Test
+    @Test (priority =3)
     public void order_products_items()
     {
         LoginPage lp = new LoginPage(driver);

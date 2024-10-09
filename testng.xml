@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Elly.Malinda/IdeaProjects/com.saudemo.app/src/test/java/testCases">
+        <classes>
+            <class name="testCases.purchase_product_order">
+                <methods>
+                    <include name="order_products_items"/>
+                </methods>
+            </class>
+            <class name="testCases.saucedemo_invalid_login">
+                <methods>
+                    <include name="unauthoised_user_not_authenticated"/>
+                </methods>
+            </class>
+            <class name="testCases.sucedemo_application_login">
+                <methods>
+                    <include name="authenticate_valid_user"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

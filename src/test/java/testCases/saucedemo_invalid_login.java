@@ -6,7 +6,7 @@ import pageObjects.LoginPage;
 import testBase.BaseClass;
 
 public class saucedemo_invalid_login extends BaseClass {
-@Test
+@Test(priority = 2)
     public void unauthoised_user_not_authenticated()
     {
         LoginPage lp = new LoginPage(driver);

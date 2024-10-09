@@ -7,7 +7,7 @@ import pageObjects.ProductsPage;
 import testBase.BaseClass;
 
 public class sucedemo_application_login extends BaseClass {
-    @Test
+    @Test(priority =1)
     public void authenticate_valid_user()
     {
         LoginPage lp = new LoginPage(driver);
